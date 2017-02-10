@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="SampleTabsTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary_dark</item>
+    <item name="colorAccent">@color/accent</item>
+    <item name="colorControlNormal">@color/primary_text</item>
+    <item name="textColorAlertDialogListItem">@color/primary_text</item>
+    <item name="android:windowBackground">@android:color/white</item>
+  </style>
+
+  <style name="SampleTabsTheme" parent="SampleTabsTheme.Base">
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowActionModeOverlay">false</item>
+  </style>
+
+  <style name="SampleTabsTheme.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimaryDark">@color/primary_dark</item>
+    <item name="android:navigationBarColor">@color/primary_dark</item>
+  </style>
+
+  <style name="SampleTabsToolbar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:textColorPrimary">@android:color/white</item>
+    <item name="colorAccent">@android:color/white</item>
+    <item name="colorControlNormal">@android:color/white</item>
+    <item name="colorControlActivated">@android:color/white</item>
+  </style>
+
+  <style name="SampleTabsTabLayout" parent="Widget.Design.TabLayout">
+    <item name="android:layout_width">match_parent</item>
+    <item name="tabIndicatorColor">@android:color/white</item>
+    <item name="tabSelectedTextColor">@android:color/white</item>
+  </style>
+</resources>

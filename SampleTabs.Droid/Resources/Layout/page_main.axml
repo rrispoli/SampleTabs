@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/SampleTabsToolbar">
+    <android.support.v7.widget.Toolbar
+     android:id="@+id/main_toolbar"
+     android:layout_width="match_parent"
+     android:layout_height="?attr/actionBarSize"
+     android:background="?attr/colorPrimary"
+     android:theme="@style/SampleTabsToolbar"
+     local:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    <android.support.design.widget.TabLayout
+    android:id="@+id/main_tablayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    local:tabBackground="?attr/colorPrimary"
+    style="@style/SampleTabsTabLayout" />
+  </android.support.design.widget.AppBarLayout>
+  <android.support.v4.view.ViewPager
+    android:id="@+id/main_view_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    local:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</android.support.design.widget.CoordinatorLayout>
