@@ -56,6 +56,7 @@ namespace SampleTabs.iOS.Views
             screen.TabBarItem = new UITabBarItem(UITabBarSystemItem.Search, index);
 
             controller.PushViewController(screen, true);
+            controller.NavigationBarHidden = true;
             return controller;
         }
     }

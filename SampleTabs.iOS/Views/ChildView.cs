@@ -2,6 +2,8 @@ using MvvmCross.iOS.Views;
 using SampleTabs.Core.ViewModels;
 using System;
 using UIKit;
+using MvvmCross.Binding.BindingContext;
+using CoreGraphics;
 
 namespace SampleTabs.iOS.Views
 {
@@ -11,9 +13,16 @@ namespace SampleTabs.iOS.Views
         {
             base.ViewDidLoad();
 
-            NavigationController.SetNavigationBarHidden(true, false);
             EdgesForExtendedLayout = UIRectEdge.None;
             View.BackgroundColor = UIColor.FromRGB(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255));
+
+            var button = new UIButton(new CGRect(200, 200, 80, 40));
+            button.SetTitle("GO", UIControlState.Normal);
+            Add(button);
+
+            var set = this.CreateBindingSet<ChildView, ChildViewModel>();
+            set.Bind(button).To(vm => vm.GoToChildCommand);
+            set.Apply();
         }
     }
 }

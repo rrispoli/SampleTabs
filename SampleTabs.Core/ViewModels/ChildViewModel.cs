@@ -1,10 +1,11 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
 
 namespace SampleTabs.Core.ViewModels
 {
     public class ChildViewModel : MvxViewModel
     {
-        public ChildViewModel(string name)
+        public ChildViewModel(string name = "default")
         {
             Name = name;
         }
@@ -19,5 +20,7 @@ namespace SampleTabs.Core.ViewModels
                 RaisePropertyChanged(() => Name);
             }
         }
+
+        public ICommand GoToChildCommand => new MvxCommand(() => ShowViewModel<ChildViewModel>());
     }
 }
