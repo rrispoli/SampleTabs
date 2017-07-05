@@ -21,6 +21,6 @@ namespace SampleTabs.Core.ViewModels
             }
         }
 
-        public ICommand GoToChildCommand => new MvxCommand(() => ShowViewModel<ChildViewModel>());
+        public ICommand GoToChildCommand => new MvxCommand(() => ShowViewModel<ChildOfChildViewModel>());
     }
 }

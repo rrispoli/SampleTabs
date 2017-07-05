@@ -117,12 +117,11 @@
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Views\ChildOfChildView.cs" />
     <Compile Include="Views\ChildView.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Helpers\CustomMvxIosViewPresenter.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

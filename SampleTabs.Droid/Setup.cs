@@ -1,12 +1,12 @@
 using Android.Content;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Platform;
+using MvvmCross.Droid.Support.V7.AppCompat;
 using System.Collections.Generic;
 using System.Reflection;
 
 namespace SampleTabs.Droid
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup : MvxAppCompatSetup
     {
         public Setup(Context applicationContext) : base(applicationContext)
         {
