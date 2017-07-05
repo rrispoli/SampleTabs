@@ -3,9 +3,11 @@ using MvvmCross.iOS.Views;
 using UIKit;
 using SampleTabs.Core.ViewModels;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Views.Presenters.Attributes;
 
 namespace SampleTabs.iOS.Views
 {
+    [MvxRootPresentation(WrapInNavigationController = true)]
     public class MainView : MvxTabBarViewController<MainViewModel>
     {
         private bool _constructed;

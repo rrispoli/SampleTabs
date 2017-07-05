@@ -1,5 +1,7 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
+using MvvmCross.iOS.Views.Presenters;
+using SampleTabs.iOS.Helpers;
 using UIKit;
 
 namespace SampleTabs.iOS
@@ -13,6 +15,11 @@ namespace SampleTabs.iOS
         protected override IMvxApplication CreateApp()
         {
             return new Core.App();
+        }
+
+        protected override IMvxIosViewPresenter CreatePresenter()
+        {
+            return new CustomMvxIosViewPresenter(ApplicationDelegate, Window);
         }
     }
 }

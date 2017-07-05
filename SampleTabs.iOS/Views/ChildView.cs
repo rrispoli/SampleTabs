@@ -14,7 +14,8 @@ namespace SampleTabs.iOS.Views
             base.ViewDidLoad();
 
             EdgesForExtendedLayout = UIRectEdge.None;
-            View.BackgroundColor = UIColor.FromRGB(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255));
+            //View.BackgroundColor = UIColor.FromRGB(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255));
+            View.BackgroundColor = UIColor.DarkGray;
 
             var button = new UIButton(new CGRect(200, 200, 80, 40));
             button.SetTitle("GO", UIControlState.Normal);
