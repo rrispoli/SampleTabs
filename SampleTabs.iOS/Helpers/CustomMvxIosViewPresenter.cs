@@ -58,5 +58,21 @@ namespace SampleTabs.iOS.Helpers
 			// last scenario: display the plain viewController as root
 			SetWindowRootViewController(viewController);
 		}
+
+        protected override void ShowChildViewController(UIViewController viewController, MvxChildPresentationAttribute attribute, MvxViewModelRequest request)
+        {
+            //Fix to show tabchild child view correctly
+            if (MasterNavigationController != null)
+            {
+                MasterNavigationController.PushViewController(viewController, attribute.Animated);
+
+                if (viewController is IMvxTabBarViewController)
+                    TabBarViewController = viewController as IMvxTabBarViewController;
+                
+                return;
+            }
+
+            //throw new MvxException($"Trying to show View type: {viewController.GetType().Name} as child, but there is no current stack!");
+        }
     }
 }
